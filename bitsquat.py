@@ -28,6 +28,13 @@ def usage():
     print "bitsquat.py google .com"
     print ""
 
+def isRegistered(domain, suffix):
+    try:
+        IP = socket.gethostbyname(domain + suffix)
+        return [(domain + suffix), IP]
+    except:
+        return "Available", "0.0.0.0"
+
 if __name__ == "__main__":
 
     if len(sys.argv) < 2:
@@ -36,6 +43,14 @@ if __name__ == "__main__":
 
     name = sys.argv[1]
     suffix = sys.argv[2]
+    q = isRegistered(name, suffix)
+    
+    if(q[0] == "Available"):
+        print ("The domain " + name + suffix + " seems to be available.")
+        print "Do you want to proceed with the scan? (y/n)"
+        raw = raw_input("> ")
+        if(raw=="n"):
+            sys.exit()
 
     for i in range(0, len(name)):
         val = name[i]
