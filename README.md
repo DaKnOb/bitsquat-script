@@ -17,14 +17,14 @@ Use bitsquat-script to generate a valid list of domain names based on a target t
 ## Usage
 _Please note that you need Python installed for this to work_
 
-```Shell
+```
 python bitsquat.py example .com
 ```
-<br/><br/>
+
 _bitsquat.py_ being the file name,<br/>
 _example_ being the domain name,<br/>
 _.com_ being the domain suffix
 
 
 
-** Latest update: September 14, 2013**
+**Latest update: September 14, 2013**
